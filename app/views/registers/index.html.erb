@@ -1,0 +1,39 @@
+<h1>List of registerd bikes</h1>
+
+ <% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
+
+ 
+
+<table id="registers">
+<thead>
+  <tr>
+    <th>FirstName</th>
+    <th>Middle name</th>
+    <th>Last name</th>
+    <th>Bike Company</th>
+    <th>Bike Model</th>
+    <th>Bike No.</th>
+
+  </tr>
+</thead>
+<tbody>
+  <% @list.each do |post| %>
+    <tr>
+      <td><%= link_to(post.firstName, post) %></td>
+      <td><%= post.middlename %></td>
+      <td><%= post.lastname %></td>
+      <td><%= post.bike_company %></td>
+      <td><%= post.bike_model %></td>
+      <td><%= post.bike_no %></td>
+    </tr>
+  <% end %>
+</tbody>
+</table>

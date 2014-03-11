@@ -1,0 +1,9 @@
+np:
+  hello: "Hello world"
+  title: "tapai ko bike register garnu hola"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d %B, %Y"
+      short: "%d %b"
+      short_date: "%d/%m/%Y"

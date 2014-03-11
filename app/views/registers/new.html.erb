@@ -1,0 +1,30 @@
+<h1>Register your  Bike</h1>
+<p>Please fill in following fields to register your bike</p>
+
+<!--
+  use provide to set title at each view - this will be used by layouts/application.html.erb
+-->
+<% provide(:title, 'New Registration') %>
+
+
+<!-- when a form is submitted, the fields of the form are sent to Rails as parameters. These parameters can then be referenced inside the controller actions 
+:post_object can be accessed from action controller
+-->
+
+  <%= semantic_form_for :post_object, url: registers_path do |f| %>
+    <%= f.input :firstName , :label => "First Name" %>
+    <%= f.input :middlename , :required => false %>
+    <%= f.input :lastName %>
+    <%= f.input :bike_no %>
+    <%= f.input :bike_company, :as => :select, :collection => ["Commencal" ,"Giant" ,"Trek" ,"Other"] %>
+    <%= f.input :bike_model, :required => false, :hint => "Example: Commencal, Giant, Trek" %>
+    <%= f.action :submit, :label => "Submit" , :button_html => { :value => 'Submit' ,:class => "lagoon" }  %>
+  <% end %>
+
+
+
+  <!--	<%= link_to "new", new_register_path %>
+  	<%= link_to "All", registers_path %>
+  -->
+
+
