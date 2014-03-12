@@ -18,6 +18,8 @@
     <%= f.input :bike_no %>
     <%= f.input :bike_company, :as => :select, :collection => ["Commencal" ,"Giant" ,"Trek" ,"Other"] %>
     <%= f.input :bike_model, :required => false, :hint => "Example: Commencal, Giant, Trek" %>
+    <%= f.label :photo , "Photo"%>
+    <%= f.file_field :photo %>
     <%= f.action :submit, :label => "Submit" , :button_html => { :value => 'Submit' ,:class => "lagoon" }  %>
   <% end %>
 

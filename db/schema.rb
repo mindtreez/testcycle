@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140109171917) do
+ActiveRecord::Schema.define(version: 20140312111718) do
 
   create_table "registers", force: true do |t|
     t.string   "firstName"
@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(version: 20140109171917) do
     t.datetime "updated_at"
     t.string   "firstname"
     t.string   "lastname"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

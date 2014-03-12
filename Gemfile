@@ -15,6 +15,7 @@ gem 'selenium-webdriver'
 
 gem 'bootstrap-sass', '~> 2.3.1.0'
 
+gem "paperclip", "~>4.1"
  
  gem 'formtastic'
 
